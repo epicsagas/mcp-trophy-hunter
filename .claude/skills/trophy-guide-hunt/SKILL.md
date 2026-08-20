@@ -1,0 +1,1 @@
+../../../skills/trophy-guide-hunt/SKILL.md
