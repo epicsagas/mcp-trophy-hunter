@@ -1,0 +1,21 @@
+{
+  "name": "mcp-trophy-hunter",
+  "interface": {
+    "displayName": "mcp-trophy-hunter"
+  },
+  "plugins": [
+    {
+      "name": "mcp-trophy-hunter",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/epicsagas/mcp-trophy-hunter.git"
+      },
+      "pluginManifest": "./.codex-plugin/plugin.json",
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Gaming"
+    }
+  ]
+}
