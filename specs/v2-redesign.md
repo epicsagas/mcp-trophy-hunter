@@ -179,7 +179,7 @@ Ask for details on a specific game.
 1. Rename `get_platinum_roadmap` → `get_trophy_list` (breaking change — ok for v2)
 2. Delete `find_easy_platinums`
 3. Add `get_my_games` and `suggest_next_trophy`
-4. Update README and CLAUDE.md
+4. Update README and the Claude rules file
 
 ---
 

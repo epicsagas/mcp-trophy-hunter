@@ -1,4 +1,4 @@
-# AGENTS.md — mcp-trophy-hunter
+# mcp-trophy-hunter — shared agent guide
 
 > Shared agent guide. Claude Code, Codex, agy, and hermes all load this file.
 
@@ -27,4 +27,4 @@ Register as MCP server per host (server itself, not the skill, needs this):
 
 ## Development
 
-See CLAUDE.md for full rules. All specs, comments, commit messages in English.
+See the repository's Claude rules file for full details. All specs, comments, commit messages in English.
