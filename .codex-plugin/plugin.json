@@ -11,6 +11,7 @@
   "license": "MIT",
   "keywords": ["psn", "trophies", "platinum", "gaming", "mcp"],
   "skills": "./skills/",
+  "mcpServers": "./mcp_config.json",
   "agents": "./.codex-plugin/agents/",
   "interface": {
     "displayName": "mcp-trophy-hunter",
