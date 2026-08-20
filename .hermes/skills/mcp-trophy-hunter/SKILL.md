@@ -1,1 +1,0 @@
-../../../skills/mcp-trophy-hunter/SKILL.md
