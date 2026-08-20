@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "mcp-trophy-hunter",
+  "version": "1.0.4",
+  "description": "PlayStation trophy hunting MCP server — platinum progress, trophy lists with rarity, next-trophy suggestions",
+  "author": { "name": "epicsagas", "url": "https://github.com/epicsagas" },
+  "homepage": "https://github.com/epicsagas/mcp-trophy-hunter",
+  "repository": "https://github.com/epicsagas/mcp-trophy-hunter",
+  "license": "MIT",
+  "keywords": ["psn", "trophies", "platinum", "gaming", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": ["./.mcp.json"]
+}

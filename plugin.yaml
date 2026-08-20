@@ -1,0 +1,13 @@
+# Hermes plugin manifest (YAML).
+# Spec: https://hermes-agent.nousresearch.com/docs/developer-guide/plugins
+# Loaded by `hermes plugins` from ~/.hermes/plugins/<name>/plugin.yaml
+name: mcp-trophy-hunter
+version: "1.0.4"
+description: "PlayStation trophy hunting MCP server — platinum progress, trophy lists with rarity, next-trophy suggestions"
+author:
+  name: epicsagas
+  url: https://github.com/epicsagas
+# Hermes discovers bundled skills via ctx.register_skill() in __init__.py;
+# this list documents them so forge doctor can verify the bundle.
+provides_skills:
+  - mcp-trophy-hunter

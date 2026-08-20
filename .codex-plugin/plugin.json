@@ -1,0 +1,23 @@
+{
+  "name": "mcp-trophy-hunter",
+  "version": "1.0.4",
+  "description": "PlayStation trophy hunting MCP server — platinum progress, trophy lists with rarity, next-trophy suggestions",
+  "author": {
+    "name": "epicsagas",
+    "url": "https://github.com/epicsagas"
+  },
+  "homepage": "https://github.com/epicsagas/mcp-trophy-hunter",
+  "repository": "https://github.com/epicsagas/mcp-trophy-hunter",
+  "license": "MIT",
+  "keywords": ["psn", "trophies", "platinum", "gaming", "mcp"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "mcp-trophy-hunter",
+    "shortDescription": "PlayStation trophy hunting MCP server",
+    "longDescription": "PSN trophy data via MCP: platinum progress, trophy lists with rarity, next-trophy suggestions. Server runs as node dist/index.js; register it as an MCP server in the host config.",
+    "developerName": "epicsagas",
+    "category": "Gaming",
+    "capabilities": ["Bash", "Read", "Write", "Edit"],
+    "websiteURL": "https://github.com/epicsagas/mcp-trophy-hunter"
+  }
+}

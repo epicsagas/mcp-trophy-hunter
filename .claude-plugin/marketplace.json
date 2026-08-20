@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mcp-trophy-hunter",
+  "owner": {
+    "name": "epicsagas",
+    "url": "https://github.com/epicsagas"
+  },
+  "metadata": {
+    "description": "PlayStation trophy hunting MCP server"
+  },
+  "plugins": [
+    {
+      "name": "mcp-trophy-hunter",
+      "source": "./",
+      "description": "PlayStation trophy hunting MCP server — platinum progress, trophy lists with rarity, next-trophy suggestions"
+    }
+  ]
+}
