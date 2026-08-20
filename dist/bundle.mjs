@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);
+import { createRequire } from 'node:module'; import { fileURLToPath } from 'node:url'; import { dirname as __dirname_fn } from 'node:path'; const require = createRequire(import.meta.url); const __dirname = __dirname_fn(fileURLToPath(import.meta.url));
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -26019,7 +26019,7 @@ function registerRoadmapTool(server2) {
     const [trophies, { earnedIds, rarityMap }, generalResults] = await Promise.all([
       getTrophiesForGame(gameInfo.npCommunicationId, gameInfo.npServiceName),
       getEarnedStatus(gameInfo.npCommunicationId, gameInfo.npServiceName),
-      searchYouTube(`${gameInfo.trophyTitleName} platinum trophy guide`, 1)
+      searchYouTube(`${gameInfo.trophyTitleName} platinum trophy guide`, 1).catch(() => [])
     ]);
     const generalVideo = generalResults[0] ?? null;
     const platinum = trophies.find((t) => t.trophyType === "platinum");

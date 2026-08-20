@@ -32,7 +32,7 @@ export function registerRoadmapTool(server: McpServer): void {
       const [trophies, { earnedIds, rarityMap }, generalResults] = await Promise.all([
         getTrophiesForGame(gameInfo.npCommunicationId, gameInfo.npServiceName),
         getEarnedStatus(gameInfo.npCommunicationId, gameInfo.npServiceName),
-        searchYouTube(`${gameInfo.trophyTitleName} platinum trophy guide`, 1),
+        searchYouTube(`${gameInfo.trophyTitleName} platinum trophy guide`, 1).catch(() => []),
       ]);
 
       const generalVideo = generalResults[0] ?? null;

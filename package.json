@@ -1,6 +1,6 @@
 {
   "name": "@pavlo-skuibida/mcp-trophy-hunter",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "MCP server for PlayStation trophy hunting — see your games, trophy lists with rarity, and next-trophy suggestions via Claude",
   "author": "Pavlo Skuibida",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && esbuild dist/index.js --bundle --platform=node --target=node18 --format=esm --outfile=dist/bundle.mjs --banner:js=\"import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);\"",
+    "build": "tsc && esbuild dist/index.js --bundle --platform=node --target=node18 --format=esm --outfile=dist/bundle.mjs --banner:js=\"import { createRequire } from 'node:module'; import { fileURLToPath } from 'node:url'; import { dirname as __dirname_fn } from 'node:path'; const require = createRequire(import.meta.url); const __dirname = __dirname_fn(fileURLToPath(import.meta.url));\"",
     "dev": "tsc --watch",
     "start": "node dist/bundle.mjs",
     "inspector": "npm run build && npx @modelcontextprotocol/inspector node dist/bundle.mjs"
