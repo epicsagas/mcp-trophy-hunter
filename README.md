@@ -51,6 +51,62 @@ which node   # copy this path
 
 Then restart Claude Desktop.
 
+### Option 3 — Install as a plugin (Claude Code · Codex · agy · hermes)
+
+This repo also ships as a self-contained multi-host plugin. It bundles three skills
+(`mcp-trophy-hunter` usage guide, `trophy-roadmap`, `trophy-guide-hunt`), a
+`trophy-strategist` subagent (Claude Code), and the MCP server itself —
+`dist/bundle.mjs` is committed, so it runs with just Node 18+, no `npm install`.
+
+```bash
+# Claude Code — marketplace + plugin (MCP server auto-registered)
+claude plugin marketplace add epicsagas/mcp-trophy-hunter
+claude plugin install mcp-trophy-hunter@mcp-trophy-hunter
+
+# Codex — skills via plugin; MCP server registered separately (below)
+codex plugin marketplace add epicsagas/mcp-trophy-hunter
+codex plugin add mcp-trophy-hunter@mcp-trophy-hunter
+
+# agy — skills via plugin; MCP server registered separately (below)
+agy plugin install https://github.com/epicsagas/mcp-trophy-hunter
+agy plugin enable mcp-trophy-hunter
+
+# hermes — skills via plugin; MCP server registered separately (below)
+hermes plugins install https://github.com/epicsagas/mcp-trophy-hunter
+hermes plugins enable mcp-trophy-hunter
+```
+
+Only the Claude Code plugin auto-registers the MCP server (via the bundled
+`.mcp.json`). For the other hosts, register the server once:
+
+```bash
+git clone https://github.com/epicsagas/mcp-trophy-hunter /path/to/mcp-trophy-hunter
+```
+
+```toml
+# Codex — append to ~/.codex/config.toml
+[mcp_servers.trophy-hunter]
+command = "node"
+args = ["/path/to/mcp-trophy-hunter/dist/bundle.mjs"]
+```
+
+```json
+// agy — merge into ~/.antigravity/settings.json
+{
+  "mcpServers": {
+    "trophy-hunter": {
+      "command": "node",
+      "args": ["/path/to/mcp-trophy-hunter/dist/bundle.mjs"]
+    }
+  }
+}
+```
+
+```bash
+# hermes
+hermes mcp add trophy-hunter --command node --args /path/to/mcp-trophy-hunter/dist/bundle.mjs
+```
+
 ## First-time Setup
 
 You need to authenticate with PSN once per session (mcpize) or once every ~2 months (self-hosted):
